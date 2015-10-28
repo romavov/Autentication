@@ -1,1 +1,9 @@
-<center><h1>WELCOME!</h1></center>
+<% if current_user %>
+  <center>
+    <h1>WELCOME!</h1>
+    <h3><%= current_user.email %></h3>
+  </center>
+<% else %>
+  <center>Please login or sign in as new user, click login in top-right.
+  </center>
+<% end %>

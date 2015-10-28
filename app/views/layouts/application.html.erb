@@ -10,8 +10,9 @@
 
 <hr>
 <h5>
+
 <% if current_user %>
-  <p align="right">Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout' %> </p>
+  <p align="right"> Signed in as <u><%= current_user.email %></u> | <%= link_to "Logout", '/logout' %> </p>
 <% else %>
   <p align="right"> <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %> </p>
 <% end %>
