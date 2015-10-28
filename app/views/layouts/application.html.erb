@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geekhub</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<hr>
+<h5>
+<% if current_user %>
+  <p align="right">Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout' %> </p>
+<% else %>
+  <p align="right"> <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %> </p>
+<% end %>
+</h5>
+<hr>
+
+<%= yield %>
+
+</body>
+</html>
